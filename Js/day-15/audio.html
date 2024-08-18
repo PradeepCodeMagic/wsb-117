@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="./bestringtones.net_kadhalikum-pennin-instrumental-bgm.mp3"></audio>
+    <button> Paly </button>
+</body>
+
+<script>
+    let song=document.querySelector("audio");
+    let btn=document.querySelector("button");
+
+    console.log(song)
+
+
+    btn.addEventListener("click",()=>{
+       if(song.paused){
+        song.play()
+        btn.innerHTML="Pause"
+       }
+       else{
+        song.pause()
+         btn.innerHTML="Play"
+       }
+    })
+
+
+</script>
+</html>

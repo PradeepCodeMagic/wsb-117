@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+
+}
+.headerInner{
+    width: 90%;
+    
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.headerInner .left{
+    width: 47.5%;
+ 
+    display: flex;
+    
+    align-items: center;
+    font-size: 14px;
+}
+.headerInner .left .logo{
+    width: 12%;
+    text-align: center;
+
+}
+.headerInner .left img{
+    width: 80%;
+    height: 100%;
+}
+.headerInner .menu ul{
+    display: flex;
+}
+.headerInner .menu ul li{
+    padding: 0px 15px;
+}
+.headerInner .right{
+    width: 47.5%;
+   
+    display: flex;
+    justify-content: space-between;
+}
+.headerInner .right .inputDiv{
+    width: 45%;
+    padding: 5px;
+    background-color: #F5F5F6;
+}
+.headerInner .right .inputDiv input{
+    width: 80%;
+    padding: 5px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+.headerInner .right .inputDiv i{
+    color: #717288;
+}
+.headerInner .right .fontIcon{
+    width: 45%;
+    display: flex;
+}
+.headerInner .right  .fontIconBox{
+    width: 33%;
+    text-align: center;
+}
+.headerInner .right  .fontIconBox p{
+    font-size: 14px;
+}
+/*  */

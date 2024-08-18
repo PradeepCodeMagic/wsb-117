@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            width: 100%;
+            padding: 10px 0px;
+            background-color: skyblue;
+        }
+        .headerInner{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            /* border: 1px solid red; */
+        }
+        .logo{
+            width: 20%;
+            background-color: skyblue;
+            padding:0 20px;
+        }
+        .menu{
+            width: 80%;
+        }
+        .menu>ul{
+            display: flex;
+        }
+        .menu>ul>li{
+            list-style: none;
+            padding: 0px 15px;
+            cursor: pointer;
+        }
+        .homeMegaMenu{
+            width: 1000px;
+            height: 500px;
+            background-color: #ccc;
+            position: absolute;
+            top: 0%;
+            left: 10%;
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .menu>ul>li:hover .homeMegaMenu{
+            opacity: 1;
+            visibility: visible;
+        }
+        .backTrans{
+            width: 2000px;
+            height: 90vh;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            top: 141%;
+            left: -20%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        .menu>ul>li:hover .backTrans{
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="headerInner">
+            <div class="logo"> Logo </div>
+            <div class="menu">
+                <ul>
+                    <li>Home
+                       <div class="backTrans">
+                        <div class="homeMegaMenu">
+                            <div class="innerBox">
+                                <h2>Home</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                        </div> 
+                       </div>
+                    </li>
+                    <!-- <li>About
+                        <div class="homeMegaMenu">
+                            <div class="innerBox">
+                                <h2>About</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Gallery
+                        <div class="homeMegaMenu">
+                            <div class="innerBox">
+                                <h2>Gallery</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Contact
+                        <div class="homeMegaMenu">
+                            <div class="innerBox">
+                                <h2>Contact</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>Enquery
+                        <div class="homeMegaMenu">
+                            <div class="innerBox">
+                                <h2>Enquery</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                            <div class="innerBox">
+                                <h2>Heading</h2>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                    <li>Home</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi id consequatur quaerat, officia numquam, rem sit at vel reiciendis dignissimos consequuntur iure sequi consectetur. Laboriosam dolor delectus quo totam culpa.
+    </p>
+</body>
+</html>

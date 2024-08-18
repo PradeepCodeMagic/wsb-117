@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+
+        .active{
+            font-size: 25px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <button id="addBtn" > Add </button>
+    <button id="removeBtn" > remove </button>
+    <button id="toggleBtn" > toggle </button>
+
+    <div class="box ">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus quia praesentium a suscipit, voluptates, harum magni, deleniti soluta distinctio maiores.
+    </div>
+</body>
+
+<script>
+    let addBtn=document.querySelector("#addBtn")
+    let removeBtn=document.querySelector("#removeBtn")
+    let toggleBtn=document.querySelector("#toggleBtn")
+
+
+    let resultDiv=document.querySelector(".box")
+
+    addBtn.addEventListener( "click" , ()=>{
+        resultDiv.classList.add("active")
+    } )
+
+
+    removeBtn.addEventListener( "click" , ()=>{
+        resultDiv.classList.remove("active")
+    } )
+
+    toggleBtn.addEventListener( "click" , ()=>{
+        resultDiv.classList.toggle("active")
+    } )
+
+    // addBtn.onclick=()=>{
+    //     alert("hello")
+    // }
+
+
+
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            max-width: 800px;
+            margin: 40px auto;
+            box-shadow: 0 0 10px 5px #ccc;
+            padding: 15px;
+        }
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 5px;
+            margin: 10px 0;
+        }
+
+        table {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form onsubmit="userForm(event)">
+
+            <input type="text" name="uname" placeholder="name">
+            <input type="text" name="uemail" placeholder="email" id="">
+            <input type="text" placeholder="mobile number" name="umobile">
+            <textarea name="uaddress" placeholder="enter ypur home address"></textarea>
+            <br />
+            <button> save </button>
+            <!-- <input type="button" value="submit" />
+             <input type="submit" value="submit" /> -->
+
+        </form>
+
+        <table border="1" width="800">
+            <thead>
+                <td>Sr.</td>
+                <td>Name</td>
+                <td>Email</td>
+                <td>Mobile</td>
+                <td>Address</td>
+                <td> <button>Delete All </button></td>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>1.</td>
+                    <td>pradeep</td>
+                    <td>Email@gmail.com</td>
+                    <td>111223334</td>
+                    <td>wwwwww</td>
+                    <td> <button> Delete </button> </td>
+                </tr> -->
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    
+
+
+    function userForm(e) {
+        e.preventDefault()
+
+        let userObj = {
+            name: e.target.uname.value,
+            email: e.target.uemail.value,
+            mobile: e.target.umobile.value,
+            address: e.target.uaddress.value,
+        }
+
+        if (userObj.name == "" && userObj.email == "" && userObj.mobile == "" && userObj.address == "") {
+            alert("please fill up all inputs")
+        }
+        else {
+            let oldData = JSON.parse(localStorage.getItem("userInfo")) ?? []
+            let AllData = [...oldData, userObj]
+            localStorage.setItem("userInfo", JSON.stringify(AllData))
+            
+        }
+
+        event.target.reset()
+        displayData()
+    }
+
+    
+
+     function displayData() {
+        let tbody = document.querySelector("tbody")
+        let myLocalData = JSON.parse(localStorage.getItem("userInfo")) ?? []
+
+        tbody.innerHTML= ""
+        myLocalData.map((v, i) => {
+
+            console.log(v)
+            tbody.innerHTML += `
+                <tr>
+                    <td> ${i+1} </td>
+                    <td> ${v.name} </td>
+                    <td>${v.email}</td>
+                    <td>${v.mobile}</td>
+                    <td>${v.address}</td>
+                    <td> <button> Delete </button> </td>
+                </tr>
+               `
+        })
+
+        
+    }
+
+    displayData()
+
+
+
+</script>
+
+</html>

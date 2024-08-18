@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 600px;
+            height: 500px;
+            margin: auto;
+            border: 1px solid red;
+            position: relative;
+        }
+
+        .face {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            border: 1px solid;
+            border-radius: 47%;
+            position: absolute;
+            top: 0%;
+            left: 33%;
+        }
+
+        .innerFace {
+            width: 160px;
+            height: 160px;
+            background-color: white;
+            border: 1px solid;
+            position: absolute;
+            top: 21%;
+            left: 10%;
+            border-radius: 47%;
+        }
+
+        .leftEye {
+            width: 20px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid;
+            border-radius: 50%;
+            position: absolute;
+            top: 11%;
+            left: 37%;
+        }
+
+        .innerEyeBlack {
+            width: 15px;
+            height: 30px;
+            background-color: black;
+            position: absolute;
+            top: 25%;
+            left: 12%;
+            border-radius: 50%;
+        }
+
+        .innerEyeWhite {
+            width: 8px;
+            height: 16px;
+            background-color: white;
+            position: absolute;
+            top: 40%;
+            left: 22%;
+            border-radius: 50%;
+        }
+
+        .rightEye {
+            width: 20px;
+            height: 40px;
+            background-color: white;
+            border: 1px solid;
+            border-radius: 50%;
+            position: absolute;
+            top: 11%;
+            left: 48%;
+        }
+
+        .mouth {
+            width: 100px;
+            height: 48px;
+            background-color: red;
+            border: 1px solid;
+            border-radius: 0px 0px 43px 45px;
+            position: absolute;
+            top: 64%;
+            left: 24%;
+            z-index: 1;
+        }
+
+        .line {
+            width: 0.5px;
+            height: 67px;
+            background-color: black;
+            position: absolute;
+            top: 30%;
+            left: 47%;
+        }
+
+        .nose {
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            border: 1px solid;
+            top: 30%;
+            left: 42%;
+        }
+
+        .whitedot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 62px;
+            left: 84px;
+            background-color: #f4fcff;
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="face">
+            <div class="innerFace"></div>
+            <div class="leftEye">
+                <div class="innerEyeBlack">
+                    <div class="innerEyeWhite"></div>
+                </div>
+            </div>
+            <div class="rightEye">
+                <div class="innerEyeBlack">
+                    <div class="innerEyeWhite"></div>
+                </div>
+            </div>
+            <div class="mouth"></div>
+            <div class="line"></div>
+            <div class="nose"></div>
+            <div class="whitedot"></div>
+        </div>
+    </div>
+</body>
+
+</html>

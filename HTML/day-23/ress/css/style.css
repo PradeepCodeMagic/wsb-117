@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    max-width: 1000px;
+    margin: auto;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    flex-basis: 23%;
+    margin: 1%;
+    height: 200px;
+    background-color: skyblue;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+}
+.box iframe{
+    width: 100%;
+    height: 100%;
+}

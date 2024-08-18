@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    let Arr=[10,20,30,40,55,66,77,88]
+
+
+    let a=[]
+   Arr.forEach((v,i)=>{
+    a.push(i+"-"+v)
+   })
+
+   console.log(a)
+   /////////////////////////////
+   let Data=Arr.map((v,i)=>{
+        return v
+   })  
+   
+   console.log(Data)
+
+   ///////////////////////////////////////////
+
+
+  let evenNum= Arr.filter( (v)=>{
+    if(v%2==0){
+       return v
+    }
+   
+   } )
+
+
+   console.log(evenNum)
+
+
+  
+
+
+
+</script>
+</html>

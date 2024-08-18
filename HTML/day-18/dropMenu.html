@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .header{
+            width: 100%;
+            padding: 10px 0px;
+            background-color: skyblue;
+        }
+        .headerInner{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            /* border: 1px solid red; */
+        }
+        .logo{
+            background-color: skyblue;
+            padding:0 20px;
+        }
+        .menu>ul{
+            display: flex;
+        }
+        .menu>ul>li{
+            padding: 0px 20px;
+            list-style: none;
+            cursor: pointer;
+         
+        }
+        .subMenu{
+            background-color: #ccc;
+            position: absolute;
+            top: 154%;
+            left: 45%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.8s;
+        }
+        .subMenu>li{
+            list-style: none;
+            padding: 10px 20px;
+        }
+        .menu>ul>li:hover .subMenu{
+            left: 55%;
+            opacity: 1;
+            visibility: visible;
+        }
+        .innerSUbMenu{
+            background-color: aqua;
+            position: absolute;
+            top: 24%;
+            left: 99%;
+            opacity: 0;
+            visibility: hidden;
+            transition: 1s;
+        }
+        .innerSUbMenu>li{
+            list-style: none;
+            padding: 5px;
+        }
+        .subMenu>li:hover .innerSUbMenu{
+            opacity: 1;
+            visibility: visible;
+        }
+        .subMenu>li:hover{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="headerInner">
+            <div class="logo"> Logo </div>
+            <div class="menu">
+                <ul>
+                    <li>Home
+                        <ul class="subMenu" >
+                            <li>HomeInner 1</li>
+                            <li>HomeInner 2
+                                <ul class="innerSUbMenu">
+                                    <li>innerSUbMenu 1</li>
+                                    <li>innerSUbMenu 2</li>
+                                    <li>innerSUbMenu 3</li>
+                                    <li>innerSUbMenu 4</li>
+                                    <li>innerSUbMenu 5</li>
+                                </ul>
+                            </li>
+                            <li>HomeInner 3</li>
+                            <li>HomeInner 4</li>
+                            <li>HomeInner 5</li>
+                        </ul>
+                    </li>
+
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>Contact</li>
+                    <li>Enquery
+                        <ul class="subMenu" >
+                            <li>HomeInner 1</li>
+                            <li>HomeInner 2
+                                <ul class="innerSUbMenu">
+                                    <li>innerSUbMenu 1</li>
+                                    <li>innerSUbMenu 2</li>
+                                    <li>innerSUbMenu 3</li>
+                                    <li>innerSUbMenu 4</li>
+                                    <li>innerSUbMenu 5</li>
+                                </ul>
+                            </li>
+                            <li>HomeInner 3</li>
+                            <li>HomeInner 4</li>
+                            <li>HomeInner 5</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

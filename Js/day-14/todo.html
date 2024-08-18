@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            height: 100vh;
+
+        }
+        .main{
+            max-width: 600px;
+            margin: 40px auto;
+        }
+        .myinput{
+            width: 70%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px 25px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        ul{
+            /* border: 5px solid red; */
+            padding: 0;
+        }
+        ul li{
+            list-style: none;
+            background-color: aliceblue;
+            margin: 8px 0px;
+            padding: 10px;
+            position: relative;
+
+        }
+        ul li span{
+            position: absolute;
+            right: 10px;
+            font-size: 22px;
+            top: 2px;
+            background-color: #ccc;
+            padding: 5px;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+        }
+        .active{
+            background-color: red;
+            color: white;
+            text-decoration: line-through;
+        }
+        
+    </style>
+</head>
+
+<body>
+        <div class="main">
+            <div class="row">
+                <input type="text" class="myinput" placeholder="enter your task" autofocus />
+                <button>Add </button>
+            </div>
+
+            <div class="output">
+                <ul>
+                  
+                   
+                </ul>
+            </div>
+        </div>
+</body>
+<script>
+
+    let myInput=document.querySelector(".myinput")
+    let btn=document.querySelector("button")
+    let myUl=document.querySelector("ul")
+    let mySpan;
+
+
+    btn.addEventListener("click",()=>{
+          
+        let newLi=document.createElement("li")
+        newLi.innerHTML=myInput.value
+        myUl.append(newLi)
+        myInput.value="";
+
+         mySpan=document.createElement("span")
+        mySpan.innerText="X"
+        newLi.append(mySpan)
+
+
+        mySpan.addEventListener("click",()=>{
+            newLi.remove()
+        })
+
+        newLi.onclick=()=>{
+            newLi.classList.toggle("active")
+        }
+
+    })
+
+    
+
+
+
+
+
+</script>
+</html>
+
+  <!-- <li>html  <span>&#xd7;</span>  </li> -->

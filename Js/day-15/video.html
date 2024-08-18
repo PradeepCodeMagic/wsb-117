@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video width="500" src="./bandicam 2023-12-05 13-34-33-086.mp4" poster="./indian-traditional-2659269_1280 (2).jpg" ></video>
+</body>
+
+
+<script>
+    let myVideo=document.querySelector("video")
+
+    myVideo.addEventListener("click",()=>{
+        if(myVideo.paused){
+            myVideo.play()
+        }
+        else{
+            myVideo.pause()
+        }
+    })
+
+</script>
+</html>

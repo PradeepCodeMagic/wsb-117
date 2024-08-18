@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        @keyframes Move{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes InDiv{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+            .main{
+                width: 600px;
+                height: 500px;
+                margin: auto;
+                border: 1px solid red;
+                position: relative;
+            }
+            .sun{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: orangered;
+                position: absolute;
+                top: 40%;
+                left: 40%;
+            }
+            .earth{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                border: 2px solid #ccc;
+                position: absolute;
+                top: 36.5%;
+                left: 37%;
+                animation: Move 4s 0s infinite linear;
+            }
+            .earthInner{
+                width: 10px;
+                height: 10px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 0px;
+                left: 14px;
+                
+            }
+            .moon{
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 2px solid #ccc;
+                position: absolute;
+                top: 32.5%;
+                left: 34%;
+                animation: Move 2s 0.5s infinite linear;
+            }
+            .moonInner{
+                width: 20px;
+                height: 20px;
+                background-color: rgb(10, 14, 152);
+                border-radius: 50%;
+                position: absolute;
+                top: 0px;
+                left: 14px;
+                animation: InDiv 3s 0.5s infinite linear;
+                
+            }
+            .secInnerMoon{
+                width: 8px;
+                height: 8px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: -12px;
+                left: 14px;
+            }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="sun"></div>
+        <div class="earth">
+            <div class="earthInner"></div>
+        </div>
+
+        <div class="moon">
+            <div class="moonInner">
+                <div class="secInnerMoon"></div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

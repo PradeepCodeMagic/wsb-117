@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 1000px;
+            margin: 30px auto;
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 18%;
+            background-color: skyblue;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .SecMain{
+            width: 1000px;
+            margin: 30px auto;
+            border: 1px solid;
+            display: flex;
+            justify-content: space-evenly;
+            /* justify-content: space-around; */
+        }
+        .innerBox{
+            width: 22%;
+            margin: 0px 15px;
+            height: 300px;
+            background-color: red;
+        }
+
+
+        .treeMain{
+            width: 600px;
+            height: 400px;
+            margin: auto;
+            border: 1px solid red;
+           display: flex;
+           
+        
+        }
+        .innerBox-3{
+            width: 200px;
+           
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="main">
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+        <div class="box">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus consequuntur aut voluptate veniam repudiandae nihil amet maiores, dolores quas? Eligendi eveniet consequuntur iusto! Iusto consequatur quidem possimus sint consectetur eligendi?
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="SecMain">
+        <div class="innerBox"></div>
+        <div class="innerBox"></div>
+        <div class="innerBox"></div>
+        <div class="innerBox"></div>
+     
+
+    </div> -->
+
+
+    <div class="treeMain">
+        <div class="innerBox-3">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit nesciunt, reiciendis sed perferendis enim eligendi amet aliquid quod, ad dolore ut sit eius voluptatibus magnam optio, nam odit cumque velit.
+        </div>
+    </div>
+</body>
+</html>

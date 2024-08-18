@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            width: 100%;
+            background-color: rgb(215, 13, 13);
+            position: sticky;
+            top: 0;
+            position: relative;
+
+        }
+
+        nav {
+            max-width: 1000px;
+            margin: auto;
+            /* border: 1px solid red; */
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        nav .left {
+            width: 25%;
+            /* border: 1px solid red; */
+        }
+
+        nav .left img {
+            width: 100%;
+        }
+
+        nav .mid {
+            width: 50%;
+            /* border: 1px solid red;   */
+        }
+
+        nav .mid ul {
+            display: flex;
+        }
+
+        nav .mid ul li {
+            list-style: none;
+            padding: 0px 15px;
+        }
+
+        nav .right {
+            width: 15%;
+            /* border: 1px solid red;   */
+        }
+
+        .bar {
+            display: none;
+        }
+
+        @media only screen and (min-width:200px) and (max-width:575px) {
+            .bar {
+                display: block;
+                position: absolute;
+                right: 20px;
+
+            }
+
+            nav .mid ul {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 47px;
+                left: -600px;
+                background-color: skyblue;
+                padding: 20px 10px;
+                transition: 1s;
+
+            }
+
+            nav .mid ul li {
+                padding: 10px 20px;
+
+            }
+
+            nav .right {
+                display: none;
+                margin-right: 30px;
+
+            }
+
+            .bar:hover+.mid ul {
+                left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <aside class="left"> <img src="https://www.oscarpackersmovers.com/images/logo.png" alt=""> </aside>
+            <aside class="bar">
+                <i class="fa-solid fa-bars"></i>
+            </aside>
+            <aside class="mid">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Gallery</li>
+                    <li>Home</li>
+
+                </ul>
+            </aside>
+            <aside class="right">
+                +91-9811829547
+            </aside>
+
+        </nav>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let a=[10,20,30,-33,-2,0,298,333,23454]
+    let maxvalue=-Infinity;
+    let secMaxvalue=-Infinity
+
+    for(var x of a){
+       if(x > maxvalue){
+        maxvalue=x
+       }
+    }
+    console.log(maxvalue)
+
+    for (var z of a){
+        if(z>secMaxvalue && z<maxvalue){
+            secMaxvalue=z
+        }
+    }
+
+    console.log(secMaxvalue)
+
+
+   
+
+  
+</script>
+</html>

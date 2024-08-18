@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" id="myInput" >
+    <button onclick="showhide()" id="btn" > show </button>
+</body>
+
+
+<script>
+    let myInput=document.querySelector("#myInput ")
+   let btn=document.querySelector("#btn")
+
+
+    let showhide=function(){
+           if(myInput.type=="text"){
+                 btn.innerHTML="show"
+                myInput.type="password"
+           }
+           else{
+                 btn.innerHTML="hide"
+                myInput.type="text"
+           }
+    }
+
+
+
+</script>
+</html>

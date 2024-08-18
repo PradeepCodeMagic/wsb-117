@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --Yellow:rgb(192, 201, 34);
+    --Blue:blue;
+    --white:white;
+    --fontSize:25px;
+}
+
+header{
+    width: 100%;
+    background-color: var(--white);
+    position: sticky;
+    top: 0;
+}
+nav{
+    max-width: 1140px;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .right{
+    background-color: var(--Blue);
+    padding: 10px 25px;
+    border-radius: 20px 20px 0px 20px;
+    font-size: var(--fontSize);
+    color: var(--white);
+    font-weight: bold;
+}
+/*  */
+.downFooter{
+    display: none;
+}
+/*  */
+#banner{
+    width: 100%;
+ 
+    background: url("https://packshifts.in/images/banner.jpg");
+    background-size: cover;
+}
+.bannerInner{
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bannerInner .left{
+    flex-basis: 60%;
+    color: white;
+
+}
+.bannerInner .left h2{
+    padding: 25px 0px;
+    font-size: 30px;
+    line-height:40px ;
+}
+.bannerInner .left h3{
+    padding: 20px 0px;
+    font-size: 26px;
+}
+.bannerInner .left p{
+    padding: 20px 0px;
+    font-size: 20px;
+}
+.bannerInner .right{
+    flex-basis: 30%;
+    color: white;
+    border: 1px solid red;
+    background-color: #ccc;
+    border-radius: 20px;
+    padding: 20px;
+}
+.bannerInner .right input{
+    width: 80%;
+    padding: 7px;
+    margin: 5px 0px;
+}

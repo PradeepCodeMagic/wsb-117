@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+
+        .box {
+            background-color: #ccc;
+            width: 200px;
+            padding: 50px 0;
+            text-align: center;
+
+            position: absolute;
+            top: 1000px;
+            left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>0</h1>
+    </div>
+</body>
+
+<script>
+    let box = document.querySelector(".box")
+    let windowHeight = window.innerHeight;
+  
+    let h1=document.querySelector("h1")
+
+    let sum = 0;
+
+    window.addEventListener("scroll",()=>{
+
+        let boxHeight = box.getBoundingClientRect().top;
+        
+        if (boxHeight < windowHeight/2) {
+       
+            let time=setInterval(()=>{
+                if (sum < 50) {
+                sum = sum + 1
+                h1.innerHTML=sum
+            }
+            
+            },100)
+        }
+    })
+
+
+
+    
+
+    
+   
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form onsubmit="userForm(event)" >
+            <input type="text" placeholder="name" name="Uname" /><br/>
+            <label id="nameError"></label><br/>
+
+            <input type="text" placeholder="mobile" name="Umobile" /><br/>
+            <label id="mobileError"></label><br/>
+
+
+            <button>save</button>
+        </form>
+    </div>
+</body>
+<script>
+
+    let namePattern=/^[a-zA-Z]*$/;
+    let nameError=document.querySelector("#nameError")
+
+    let mobilePattern=/^[0-9]{10}$/;
+    let mobileError=document.querySelector("#mobileError")
+
+    function userForm(e){
+        e.preventDefault()
+        let useObj={
+            name:e.target.Uname.value,
+            mobile:e.target.Umobile.value,
+        }
+
+       if(!namePattern.test(useObj.name)){
+        nameError.innerHTML="Please enter valid formate"
+       }
+       else if(!mobilePattern.test(useObj.mobile)){
+        mobileError.innerHTML="Please enter valid Mobile Number"
+       }
+       else{
+        alert("done")
+       }
+    }
+
+     
+
+</script>
+</html>

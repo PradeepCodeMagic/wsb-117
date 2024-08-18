@@ -1,0 +1,47 @@
+@media only screen and (min-width:0px) and (max-width:575px){
+    nav{
+        justify-content: center;
+    }
+    nav .right{
+       display: none;
+    }
+    /*  */
+    .downFooter{
+        width: 100%;
+        display: flex;
+        position: fixed;
+        bottom: 0px;
+    }
+    .downFooter .left{
+        width: 50%;
+        padding: 20px 0px;
+        background-color: var(--Blue);
+    }
+    .downFooter .right{
+        width: 50%;
+        padding: 20px 0px;
+        background-color: var(--Yellow);
+    }
+    .bannerInner{
+        flex-direction: column;
+    }
+    .bannerInner .left h2{
+        padding: 15px 0px;
+        font-size: 23px;
+        line-height: 28px;
+        text-align: center;
+    }
+    .bannerInner .left h3{
+        padding: 0px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .bannerInner .left p{
+        padding: 12px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .bannerImg{
+        text-align: center;
+    }
+}
