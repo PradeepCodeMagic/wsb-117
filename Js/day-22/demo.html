@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+            .main{
+                width: 1200px;
+                margin: 20px auto;
+                /* border: 1px solid; */
+                /* padding: 10px; */
+            }
+            .row-1 input{
+                width: 90%;
+                padding: 8px;
+            }
+            .row-2{
+                width: 100%;
+                display: flex;
+                /* justify-content: space-evenly; */
+                flex-wrap: wrap;
+               
+            }
+            .box{
+                flex-basis: 20%;
+                margin: 1%;
+                background-color: wheat;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            .box img{
+                width: 100%;
+                border-radius: 10px;
+            }
+            .box:hover{
+                background-color: rgb(224, 177, 120);
+            }
+            .pagination{
+                width: 500px;
+                margin: 20px auto;
+            }
+            .pagination ul{
+                display: flex;
+            }
+            .pagination ul li{
+                list-style: none;
+                padding: 10px;
+                background-color: blueviolet;
+                color: white;
+                font-weight: bold;
+                margin: 10px;
+                cursor: pointer;
+            }
+            .pagination ul li:hover{
+                background-color: azure;
+                color: black;
+            }
+    </style>
+</head>
+<body>
+        <div class="main">
+                <div class="row-1">
+                    <h1>Movie App</h1>
+                    <input type="text" placeholder="search your movie" />
+                </div>
+
+                <div class="row-2">
+                    
+                    
+                    
+                </div>
+
+                <div class="pagination">
+                    <ul id="pageUl" >
+                        
+                    </ul>
+                </div>
+        </div>
+</body>
+
+<script>
+
+    let myInput=document.querySelector("input");
+    let mainDiv=document.querySelector(".row-2")
+
+    let SearchMovie;
+
+    myInput.addEventListener("keyup",(e)=>{
+        SearchMovie=e.target.value
+        // console.log(SearchMovie)
+
+        displayData(SearchMovie)
+        
+    })
+
+    
+
+    let displayData= async (SearchMovie,pageId)=>{
+        console.log(pageId)
+        
+       let url;
+
+        if(SearchMovie==undefined){
+            url=`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1`
+        }
+        else if(pageId!=undefined){
+            url=`https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=${pageId}`
+        }
+        else{
+            url=`https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=${SearchMovie}`
+        }
+
+
+       
+
+       let api= await fetch(url)
+
+       let newData= await api.json();
+       let freshData=newData.results;
+
+       
+       mainDiv.innerHTML=""
+       freshData.map((v,i)=>{
+        
+             mainDiv.innerHTML +=`
+                        <div class="box">
+                            <img src="https://image.tmdb.org/t/p/w1280/${v.poster_path}" alt="">
+                            <h3>Movie name : ${v.title} </h3>
+                            <h4> Release Date : ${v.release_date} </h4>
+                        </div>
+             `
+       })
+    }
+
+    displayData()
+
+    // pagination 
+
+    let pageUl=document.querySelector("#pageUl")
+
+    pageUl.innerHTML="";
+
+    for(var i=1 ; i<=10 ;i++){
+        pageUl.innerHTML +=`
+                    <li onclick="pageF(${i})"> ${i} </li>
+        `
+    }
+
+
+    let pageF=(pageId)=>{
+        displayData("",pageId)
+    }   
+
+    
+
+    
+
+
+</script>
+</html>
