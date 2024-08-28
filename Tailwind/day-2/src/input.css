@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+
+
+.pradeep{
+   @apply w-[200px] h-[200px] bg-slate-600
+}
+@layer utilities{
+    .btn{
+        @apply text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900
+    }
+
+    .pp{
+        width: 200px;
+        height: 200px;
+        background-color: pink
+    }
+}
+
+@tailwind utilities;
+
+.ws{
+    width: 200px;
+    height: 200px;
+    background-color: red
+}
+
+.greens{
+    @apply w-[200px] h-[200px] bg-green-600
+}
+
