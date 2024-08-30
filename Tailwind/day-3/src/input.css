@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+
+.row-2{
+    
+   
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+   
+    
+   
+   
+}
+@tailwind utilities;
