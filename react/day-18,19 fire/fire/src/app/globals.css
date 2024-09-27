@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main{
+  width: 1000px;
+  margin: auto;
+  background-color: #ccc;
+}
+ .main ul{
+  display: flex;
+ }
+
+ .main ul li{
+ padding: 20px;
+ }
+
+ .tabs{
+  background-color: red;
+  margin: 5px;
+  display: none;
+ }
+
+ .active{
+  display: block !important;
+ }
