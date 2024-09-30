@@ -9,7 +9,7 @@ export default function page() {
   return (
     <div className='main' >
       <ul>
-        <li onClick={()=>setTabs(1)} >home1</li>
+        <li onClick={()=>setTabs(1)}>home1</li>
         <li onClick={()=>setTabs(2)}>home2</li>
         <li onClick={()=>setTabs(3)}>home3</li>
         <li onClick={()=>setTabs(4)}>home4</li>
