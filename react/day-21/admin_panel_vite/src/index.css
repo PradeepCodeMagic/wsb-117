@@ -1,0 +1,14 @@
+.main{
+  width: 100%;
+  display: flex;
+}
+.main .left{
+  width: 30%;
+  height: 400px;
+  background-color: red;
+}
+.main .right{
+  width: 70%;
+  height: 400px;
+  background-color: rgb(27, 172, 148);
+}
